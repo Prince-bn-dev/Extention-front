@@ -1,0 +1,18 @@
+.inputType{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 5px auto;
+
+    input{
+        width: 100%;
+        border: none;
+        padding: 8px 5px;
+        background-color: rgba(37, 37, 37, 0.096);
+      
+    }
+    label{
+        font-size: 15px;
+        margin: 5px;
+    }
+}

@@ -1,0 +1,113 @@
+.Register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px 0;
+    h1{
+        margin-top: 30px;
+    }
+    .formulaire{
+        display: flex;
+        width: 60%;
+        height: 85vh;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        border-radius:  0 0 25%  0;
+
+        .right{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            gap: 10px 0;
+            // background-color: #000063;
+            background-image: linear-gradient(to right top, #000063, #2b003f, #2a0024, #1f0010, #000000);
+            border-radius:  25% 0 25%  0;
+            button{
+                width: 35%;
+                border: none;
+                color: var(--first-color);
+                background-color: rgb(255, 255, 255);
+                padding:7px;
+                margin: auto;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                
+            }
+
+            img{
+                height: 70%;
+                width: 80%;
+                margin: auto;
+            }
+        }
+
+        .left{
+            display: flex;
+            flex-direction: column;
+         width: 50%;
+         gap: 28px 0;
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+
+                section{
+                    width: 80%;
+                    margin:10px auto;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    div{
+                        width: 80%;
+                        input{
+                            width:100% ;
+                        }
+                    }
+                    span{
+                        width: 20%;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px 5px;
+                    height: 100%;
+
+                        svg{
+                            width: 100%;
+                            font-size: 20px;
+                        }
+                    }
+
+
+                }
+            }
+            h2{
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            button{
+                width: 40%;
+                border: none;
+                color: white;
+                // background-color: #000063;
+                background-image: linear-gradient(to right top, #000063, #2b003f, #2a0024, #1f0010, #000000);
+                padding:9px;
+                margin-left: 40px;
+
+            }
+    
+        
+
+       
+
+        }
+    }
+
+}
