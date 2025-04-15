@@ -11,7 +11,8 @@
     .formulaire{
         display: flex;
         width: 60%;
-        height: 85vh;
+        height: auto;
+        margin: 25px 0;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
         border-radius:  0 0 25%  0;
 
@@ -19,9 +20,8 @@
             display: flex;
             flex-direction: column;
             width: 50%;
-            height: 100%;
+            height: auto;
             gap: 10px 0;
-            // background-color: #000063;
             background-image: linear-gradient(to right top, #000063, #2b003f, #2a0024, #1f0010, #000000);
             border-radius:  25% 0 25%  0;
             button{
@@ -30,7 +30,7 @@
                 color: var(--first-color);
                 background-color: rgb(255, 255, 255);
                 padding:7px;
-                margin: auto;
+                margin: 10px auto;
 
                 a{
                     text-decoration: none;
@@ -43,6 +43,7 @@
                 height: 70%;
                 width: 80%;
                 margin: auto;
+                object-fit: cover;
             }
         }
 
@@ -99,7 +100,7 @@
                 // background-color: #000063;
                 background-image: linear-gradient(to right top, #000063, #2b003f, #2a0024, #1f0010, #000000);
                 padding:9px;
-                margin-left: 40px;
+                margin: 10px auto;
 
             }
     
