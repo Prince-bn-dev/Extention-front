@@ -1,0 +1,49 @@
+.authContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px 0;
+    padding: 50px 0;
+    h1{
+        margin-top: 30px;
+    }
+    .ac-formAndImg{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        
+        &>section,&>form{
+            width: 45%;
+        }
+        .ac-img{
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px 0;
+            background-color: var(--first-color);
+            // background-image: linear-gradient(to right top, #5031ec, #2f30c3, #142b9a, #072471, #0a1a49, #0f1945, #121842, #14173e, #231e5b, #392178, #552093, #7715ac);            border-radius: 0 25%  25% 0;
+
+            img{
+                width: 80%;
+            }
+            a{
+                display: block;
+            }
+        }
+
+        .ac-form{
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}

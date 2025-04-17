@@ -112,3 +112,47 @@ export function PhQuotesFill(props) {
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" {...props}><path fill="currentColor" d="M116 72v88a48.05 48.05 0 0 1-48 48a8 8 0 0 1 0-16a32 32 0 0 0 32-32v-8H40a16 16 0 0 1-16-16V72a16 16 0 0 1 16-16h60a16 16 0 0 1 16 16m100-16h-60a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h60v8a32 32 0 0 1-32 32a8 8 0 0 0 0 16a48.05 48.05 0 0 0 48-48V72a16 16 0 0 0-16-16"></path></svg>
   )
 }
+
+export function PhList(props) {
+  return (
+    <svg className="Hamburger-icone" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" {...props}><path fill="currentColor" d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8M40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16m176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16"></path></svg>
+  )
+}
+
+export function PhXLight(props) {
+  return (
+    <svg className="close-icone" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" {...props}><path fill="currentColor" d="M204.24 195.76a6 6 0 1 1-8.48 8.48L128 136.49l-67.76 67.75a6 6 0 0 1-8.48-8.48L119.51 128L51.76 60.24a6 6 0 0 1 8.48-8.48L128 119.51l67.76-67.75a6 6 0 0 1 8.48 8.48L136.49 128Z"></path></svg>
+  )
+}
+
+
+export function PhUserCircle(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256" {...props}>{/* Icon from Phosphor by Phosphor Icons - https://github.com/phosphor-icons/core/blob/main/LICENSE */}<path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24M74.08 197.5a64 64 0 0 1 107.84 0a87.83 87.83 0 0 1-107.84 0M96 120a32 32 0 1 1 32 32a32 32 0 0 1-32-32m97.76 66.41a79.66 79.66 0 0 0-36.06-28.75a48 48 0 1 0-59.4 0a79.66 79.66 0 0 0-36.06 28.75a88 88 0 1 1 131.52 0"></path></svg>
+  )
+}
+
+export function PhMedalBold(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="services-icones" width="1em" height="1em" viewBox="0 0 256 256" {...props}><path fill="currentColor" d="M220 96a92 92 0 1 0-152 69.69V240a12 12 0 0 0 17.37 10.73L128 229.42l42.64 21.31A12 12 0 0 0 188 240v-74.31A91.86 91.86 0 0 0 220 96M60 96a68 68 0 1 1 68 68a68.07 68.07 0 0 1-68-68m104 124.59l-30.64-15.32a12 12 0 0 0-10.74 0L92 220.58v-39.92a92 92 0 0 0 72 0ZM128 148a52 52 0 1 0-52-52a52.06 52.06 0 0 0 52 52m0-80a28 28 0 1 1-28 28a28 28 0 0 1 28-28"></path></svg>
+  )
+}
+
+export function PhMapPinAreaDuotone(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="services-icones" width="1em" height="1em" viewBox="0 0 256 256" {...props}><g fill="currentColor"><path d="M184 80c0 56-56 88-56 88s-56-32-56-88a56 56 0 0 1 112 0" opacity=".2"></path><path d="M112 80a16 16 0 1 1 16 16a16 16 0 0 1-16-16m-48 0a64 64 0 0 1 128 0c0 59.95-57.58 93.54-60 94.95a8 8 0 0 1-7.94 0C121.58 173.54 64 140 64 80m16 0c0 42.2 35.84 70.21 48 78.5c12.15-8.28 48-36.3 48-78.5a48 48 0 0 0-96 0m122.77 67.63a8 8 0 0 0-5.54 15C213.74 168.74 224 176.92 224 184c0 13.36-36.52 32-96 32s-96-18.64-96-32c0-7.08 10.26-15.26 26.77-21.36a8 8 0 0 0-5.54-15C29.22 156.49 16 169.41 16 184c0 31.18 57.71 48 112 48s112-16.82 112-48c0-14.59-13.22-27.51-37.23-36.37"></path></g></svg>
+  )
+}
+
+export function IcOutlineDeliveryDining(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="services-icones" width="1em" height="1em" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.48L19 10.35zM4 14v-1c0-1.1.9-2 2-2h2v3zm3 3c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1"></path><path fill="currentColor" d="M5 6h5v2H5zm14 7c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3m0 4c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1"></path></svg>
+  )
+}
+
+
+export function MaterialSymbolsAcUnit(props) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>{/* Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE */}<path fill="currentColor" d="M11 22v-4.15l-3.25 3.2l-1.4-1.4L11 15v-2H9l-4.65 4.65l-1.4-1.4L6.15 13H2v-2h4.15l-3.2-3.25l1.4-1.4L9 11h2V9L6.35 4.35l1.4-1.4L11 6.15V2h2v4.15l3.25-3.2l1.4 1.4L13 9v2h2l4.65-4.65l1.4 1.4l-3.2 3.25H22v2h-4.15l3.2 3.25l-1.4 1.4L15 13h-2v2l4.65 4.65l-1.4 1.4l-3.25-3.2V22z"></path></svg>
+  )
+}

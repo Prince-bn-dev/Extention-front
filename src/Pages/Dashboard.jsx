@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState ,useEffect } from 'react'
 import { PhCopy } from '../uikits/Icons'
 import axios from 'axios'
 
@@ -18,7 +18,6 @@ export default function Dashboard() {
         })
     }
   }
-
   const handleGenerateKey = async () => {
     try {
       const token = localStorage.getItem("token") // Ton token JWT stocké après login
@@ -30,14 +29,15 @@ export default function Dashboard() {
       })
 
       setApiKey(response.data.apiKey)
-      alert("Clé générée avec succès !")
     } catch (error) {
       console.error("Erreur lors de la génération de la clé :", error)
       const msg = error.response?.data?.message || "Erreur inconnue"
       alert(`Erreur : ${msg}`)
     }
   }
-
+  setTimeout(() => {
+    handleGenerateKey()
+  }, 1);
   return (
     <div className='dashboard'>
       <div className='banniere'>

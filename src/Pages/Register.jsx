@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { PhEyeBold, PhEyeClosedBold } from '../uikits/Icons'
-import { InpuType } from '../uikits/Input'
+import { InputType, InpuTypePassword } from '../uikits/Input'
 import axios from 'axios'
+import AuthContainer from '../component/AuthContainer'
+import { FormButton } from '../uikits/Button'
 
 
 export default function Register() {
-  const [showPassword, setShowPassword] = useState(false)
 
-  // États du formulaire
   const [formData, setFormData] = useState({
     fullname: '',
     phone: '',
@@ -22,7 +22,7 @@ export default function Register() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault()
   
     if (formData.password !== formData.confirmPassword) {
@@ -54,36 +54,27 @@ export default function Register() {
   }
   
 
-  return (
-    <div className='Register'>
-      <h1>S'inscrire</h1>
-      <div className='formulaire'>
-
-        <div className='left'>
+  return (<AuthContainer
+title={'Sinscrire'}
+imgPos={1}
+img="/public/images/register.svg"
+otherAuthLink="/login"
+otherAuthLabel="Connectez vous"
+formComponent={
+  <>
           <h2>Entrez vos informations</h2>
-          <form onSubmit={handleSubmit}>
-            <InpuType label="Nom Complet" name="fullname" type="text" onChange={handleChange} />
-            <InpuType label="Votre numéro de téléphone" name="phone" type="tel" placeholder="Ex: +229 90 00 00 00" onChange={handleChange} />
-            <InpuType label="Votre numéro de whatsapp" name="whatsapp" type="tel" placeholder="Ex: +229 90 00 00 00" onChange={handleChange} />
-            <InpuType label="Votre Email" name="email" type="email" onChange={handleChange} />
+            <InputType label="Nom Complet" name="fullname" type="text" onChange={handleChange} />
+            <InputType label="Votre numéro de téléphone" name="phone" type="tel" placeholder="Ex: +229 90 00 00 00" onChange={handleChange} />
+            <InputType label="Votre numéro de whatsapp" name="whatsapp" type="tel" placeholder="Ex: +229 90 00 00 00" onChange={handleChange} />
+            <InputType label="Votre Email" name="email" type="email" onChange={handleChange} />
+            <InpuTypePassword label="Votre Mot de passe" name="password" onChange={handleChange}/>
+            <InpuTypePassword label="Confirmer Votre Mot de passe" name="password" onChange={handleChange}/>
 
-            <section>
-              <InpuType label="Votre Mot de passe" name="password" type={showPassword ? "text" : "password"} onChange={handleChange} />
-              <span onClick={() => setShowPassword(!showPassword)}>
-                {showPassword ? <PhEyeBold /> : <PhEyeClosedBold />}
-              </span>
-            </section>
-
-            <InpuType label="Veuillez confirmer votre mot de passe" name="confirmPassword" type={showPassword ? "text" : "password"} onChange={handleChange} />
-            <button type="submit">S'inscrire</button>
-          </form>
-        </div>
-
-        <div className='right'>
-          <img src="/public/images/register.svg" alt="" />
-          <button><a href="/login">Se connecter</a></button>
-        </div>
-      </div>
-    </div>
+            <FormButton dtype="normal">S'inscrire</FormButton>
+  </>
+  
+}
+authSubmit={handleRegister}
+/>
   )
 }

@@ -1,0 +1,69 @@
+input,textarea,select{
+    padding: 12px 18px;
+    border: solid 1px #dfdcdc;
+    border-radius: 12px;
+
+    // border-radius: 12px;
+    &:focus{
+        outline: 0;
+        border: solid 1px var(--first-color) !important;
+    }
+}
+
+form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+
+    .inputType{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2px;
+        &>div{
+         
+        }
+    
+        input,textarea,select{
+            width: 100%;
+        }
+        textarea{
+            height: 120px;
+        }
+        label{
+            font-size: 15px;
+            margin: 5px;
+        }
+    }
+    .inputTypePassword{
+        width: 100%;
+        div{
+            width: 100%;
+
+            input{
+                width: 85% ;
+            }
+            span{
+            border-radius: 12px;
+
+                background-color: var(--first-color);
+                color: white;
+                width: 15%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 5px;
+                svg{
+                    width: 100%;
+                    font-size: 20px;
+                }
+            }
+        }
+       
+    
+      }
+    
+}

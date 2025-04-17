@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { PhEyeBold, PhEyeClosedBold } from '../uikits/Icons'
-import { InpuType } from '../uikits/Input'
+import { InputType, InpuTypePassword } from '../uikits/Input'
 import axios from 'axios'
+import AuthContainer from '../component/AuthContainer'
+import { FormButton } from '../uikits/Button'
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -22,48 +25,36 @@ export default function Login() {
       const { data } = await axios.post("http://localhost:5550/auth/login", formData);
       alert("Connexion réussie !");
       localStorage.setItem("token", data.token);
+      navigate("/dashboard");
     } catch (err) {
       console.error("Erreur lors de la connexion :", err);
       alert("Erreur : " + (err.response?.data?.message || err.message));
     }
   };
   return (
-    <div className='login'>
-      <h1>Se Connecter</h1>
-      <div className='formulaire'>
-
-        <div className='left'>
-          <img src="/public/images/login.svg" alt="" />
-          <button><a href="/register">S'inscrire</a></button>
-        </div>
-
-        <div className='right'>
-          <form onSubmit={handleLogin}>
-            <h2>Entrez vos informations</h2>
-            <InpuType
+    <AuthContainer
+    title={'Se connecter'}
+    imgPos={1}
+    img="/public/images/login.svg"
+    otherAuthLink="/register"
+    otherAuthLabel="Inscrivez vous"
+    formComponent={
+      <>
+      <h2>Entrez vos informations</h2>
+            <InputType
               label="Votre Email"
               name="email"
               type="email"
               onChange={handleChange}
             />
+            <InpuTypePassword label="Votre Mot de passe" name="password" onChange={handleChange}/>
 
-            <section>
-              <InpuType
-                label="Votre Mot de passe"
-                name="password"
-                type={showPassword ? "text" : "password"}
-                onChange={handleChange}
-              />
-              <span onClick={() => setShowPassword(!showPassword)}>
-                {showPassword ? <PhEyeBold /> : <PhEyeClosedBold />}
-              </span>
-            </section>
-
-            <button type="submit">Se connecter</button>
-          </form>
-        </div>
-
-      </div>
-    </div>
+            <FormButton dtype="normal">Se connecter</FormButton>
+      </>
+    }
+    authSubmit={handleLogin}
+    />
   )
 }
+
+

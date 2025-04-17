@@ -1,13 +1,13 @@
 .Home{
-    position: relative;
     .navbar{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 12vh;
-        position: absolute;
+        height: 15vh;
         top: 0;
+        position: fixed;
+        backdrop-filter: blur(10px);
 
         h2{
             width: 60%;
@@ -21,7 +21,7 @@
             justify-content: space-around;
             width: 20%;
             // background-color: black;
-            height: 70%;
+            height: 60%;
             margin: 0 30px !important;
 
             .b1{
@@ -52,8 +52,7 @@
         }
     }
     .h-banner{
-        background-image: radial-gradient(circle, #8c76f6, #aa98fa, #c6bafd, #e2dcff, #ffffff);
-        height: 100vh;
+background-image: radial-gradient(circle, #421ef8, #7d60ff, #ab95ff, #d5caff, #ffffff);        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -78,6 +77,48 @@
                 
             }
         }
+    }
+
+    .clé{
+        width: 50%;
+        display: flex;
+        margin: 50px auto;
+        flex-direction: column;
+        align-items: center;
+        b{
+         text-align: center;
+        }
+
+        img{
+            margin: 50px 0;
+            width: 30%;
+            transform: rotate(80deg);
+        }
+
+        
+            button{
+                border: none;
+                background-color: #8c76f6;
+                color: white !important;
+                // border: solid 1.5px #8c76f6 !important;
+                padding: 15px 0;
+                width: 35%;
+
+                a{
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: white;
+    
+                }
+
+                &:hover{
+                    background-color: #20201e  ;
+                    transition: all ease 0.7s;
+                    
+                   
+                }
+             }
+        
     }
 
     .titre{
@@ -118,11 +159,58 @@
         }
     }
 
+    .service{
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        margin: 100px auto;
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            height: 50vh;
+            gap: 50px 0;
+            position: relative;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            p{
+                text-align: center;
+
+            }
+
+            h3{
+                font-size: 30px;
+            }
+            svg{
+                font-size: 80px;
+                position: absolute;
+                top: -10%;
+                padding: 10px;
+                background-color: #8c76f6;
+                border-radius: 100%;
+                color: white;
+            }
+
+            &:hover{
+                transition: all ease 0.7s;
+                background-color: #8c76f6;
+                color: white;
+                svg{
+                    background-color:white;
+                    color: #8c76f6;
+                }
+            }
+
+        }
+    }
+
     .avis{
         display: flex;
         width: 100%;
         height: 90vh;
         align-items: center;
+
 
 
         
@@ -165,157 +253,9 @@
             
         }
 
-        // .droite{
-        //     width: 45%;
-        //     height: 100%;
-          
-                
-        //         .commentaire{
-        //           display: flex !important;
-        //           flex-direction: column;
-        //           justify-content: space-evenly;
-        //           width: 80% !important;
-        //           margin: auto;
-        //           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0) 0px 10px 10px !important;
-        //           align-items: center;
-        //           img{
-        //             width: 200px;
-        //             height: 200px;
-        //             border-radius: 100% ;
-        //             object-fit: cover;
-        //             // border: solid 2px #01142C;
-        //           }
-              
-        //           section{
-        //             position: relative;
-        //             width: calc(100% - 250px);
-              
-        //             svg{
-        //               font-size: 100px;
-        //               color: #efefef;
-        //             }
-        //             div{
-        //               position: absolute;
-        //               top: 25px;
-              
-              
-              
-        //               h3{
-        //                 color: #01142C;
-        //                 font-size: 30px;
-        //               }
-        //             }
-        //           }
-        //          }
 
-        //          .slider-container {
-        //             height: 500px; /* ou toute hauteur que tu veux */
-        //             overflow: hidden;
-        //           }
-                  
-              
-        //           .slick-arrow{
-        //             font-size: 20px;
-              
-        //             width: 40px;
-        //             height: 40px;
-        //             border: solid 2px #01142C;
-        //             color: #01142C;
-        //             border-radius: 100%;
-        //             line-height: 40px;
-        //             text-align: center;
-        //             top: 50%;
-        //             transform: translateY(-50%);
-        //             z-index: 1;
-        //             &.slick-next{
-        //           right: 0;
-        //             }
-        //           }
-              
-              
-        // }
         
-        .droite {
-            height: 90vh;
-            overflow: hidden;
-            background-color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 2rem;
-          
-            .slick-slider {
-              height: 100%;
-              width: 100%;
-            }
-          
-            .slick-vertical .slick-track {
-              display: flex !important;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              gap: 30px 0;
-            }
-          
-            .slick-slide {
-              display: flex !important;
-              align-items: center;
-              justify-content: center;
-              height: auto !important; // ✅ empêche l’étirement
-              padding: 20px 0; // ✅ espace entre slides SANS gap
-            }
-          
-            .commentaire {
-              background-image: linear-gradient(to right top, #8c76f6, #7a61f4, #654bf2, #4e33ef, #2e12eb);
-              color: #faf3f3;
-              border-radius: 1rem;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-              max-width: 700px;
-              width: 100%;
-              padding: 2rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              gap: 1.5rem;
-              text-align: center;
-            }
-          
-            .commentaire img {
-              width: 120px;
-              height: 120px;
-              object-fit: cover;
-              border-radius: 50%;
-              border: 4px solid #faf3f3;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            }
-          
-            .commentaire section {
-              display: flex;
-              flex-direction: column;
-              gap: 1rem;
-              align-items: center;
-          
-              svg {
-                font-size: 2rem;
-                color: #ffffff;
-              }
-          
-              p {
-                font-size: 1.2rem;
-                line-height: 1.6;
-                max-width: 500px;
-              }
-          
-              .com-name {
-                margin-top: 1rem;
-                font-size: 1.4rem;
-                font-weight: bold;
-                color: #ffffff;
-                text-transform: uppercase;
-              }
-            }
-          }
+       
           
           
     }

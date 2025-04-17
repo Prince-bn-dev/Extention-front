@@ -1,0 +1,105 @@
+.Message{
+
+    .titre{
+        text-align: center;
+        margin: 30px 0;
+        font-size: 50px
+    }
+    .m-banner{
+        background-image: linear-gradient(to right top, #8c76f6, #7762e1, #614ecc, #4a3ab7, #3227a3);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                color: white;
+                position: relative;
+                height: 60vh;
+        
+        
+        
+                button{
+                    border: none;
+                    background-color: transparent;
+                    padding: 10px;
+                    border: #ffffff solid 2px;
+        
+                    a{
+                        text-decoration: none;
+                        color: #ffffff;
+                        font-size: 15px;
+                        
+                    }
+                }
+            }
+
+    .m-formulaire{
+        padding: 40px;
+
+        }
+
+        .liste-message{
+            background-color: rgba(48, 67, 153, 0.438);
+            gap: 30px 20px;
+            width: 100%;
+            margin: auto;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            .message-box{
+              position: relative;
+              width:80% !important;
+              min-height: 30vh ;
+              border-radius: 25px;
+              padding: 20px;
+              background-color: white;
+              flex-direction: column;
+              gap: 10px 0;
+              border: 1px solid #ccc;
+            
+              .selected {
+                border: 2px solid #4CAF50; // Bordure verte si sélectionné
+
+              }
+              .templateSelected {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #4CAF50;
+                color: white;
+                font-size: 12px;
+                padding: 10px 16px;
+              }
+              form{
+                .update{
+                  gap: 20px;
+                }
+              }
+
+            
+
+
+              h3{
+                font-size: 30px;
+
+              }
+
+              ol {
+                list-style-type: decimal !important;
+                padding-left: 20px;
+              
+                li {
+                  padding-top: 10px;
+                  list-style-type: decimal !important;
+                  white-space: normal;
+                  word-break: break-word;
+                  overflow-wrap: break-word;
+                }
+              }
+              
+
+            }
+        }
+   
+}

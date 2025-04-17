@@ -1,29 +1,21 @@
 import React from 'react'
 import Slider from "react-slick";
-import { PhArrowRight,PhArrowLeft, PhQuotesFill } from '../uikits/Icons';
+import { PhArrowRight,PhArrowLeft, PhQuotesFill,PhUserCircle,PhMedalBold,MaterialSymbolsAcUnit } from '../uikits/Icons';
+
 
 
 
 function Home() {
 
-    const settings = {
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        vertical: true,
-        arrows: false,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-    
-        verticalSwiping: true,
-        beforeChange: function (currentSlide, nextSlide) {
-          console.log("before change", currentSlide, nextSlide);
-        },
-        afterChange: function (currentSlide) {
-          console.log("after change", currentSlide);
-        },
-      };
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Affiche plusieurs produits horizontalement
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+ };
 
     const commentaireInfo = [
         {
@@ -77,30 +69,29 @@ function Home() {
          </h1>
 
          <button>
-            <a href="/dashboard">Obtenir votre clé</a>
+            <a href="">Télécharger votre extension</a>
          </button>
         </div>
-
+{/* 
         <div className='navbar'>
             <h2>
                 LOGO
             </h2>
             <span>
             <button className='b1'>
-                <a href="/register">S'inscrire
+                <a href="/register"> <b>S'inscrire</b>
                 </a>
             </button>
             <button className='b2'>
-            <a href="/login">Se connecter
+            <a href="/login"> <b>Se connecter</b>
             </a>
             </button>
             </span>
-        </div>
+        </div> */}
 
-        <h2 className='titre'>
-              A-Propos
-            </h2>
+       
 
+        <h2 className='titre'>A-Propos</h2>
         <div className='about'>
 
           <div className='left'>
@@ -125,9 +116,64 @@ function Home() {
             <img src="/public/images/about.svg" alt="" />
           </div>
         </div>
+        <h2 className='titre'> Voulez vous une clé ? </h2>
+        <div className='clé'>
+         <b>
+         Cette clé d’accessibilité est fournie pour permettre l’utilisation personnelle
+          de l’extension. Elle sert à authentifier votre accès et garantir une utilisation
+           sécurisée et conforme aux conditions prévues. Cette clé est strictement réservée
+            à un usage individuel
+          et ne doit pas être partagée ou utilisée à des fins commerciales sans autorisation préalable
+         </b>
+
+         <img src="/public/images/arrow.png" alt="" />
+
+
+         <button><a href="/dashboard"><b>Obtenir votre clé</b></a></button>
+
+        </div>
+
+        <h2 className='titre'>Nos services</h2>
+
+        <div className='service'>
+         <section>
+
+          <PhUserCircle/>
+          <h3>
+            titre
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aut ipsum
+          </p>
+         </section>
+
+         <section>
+          <PhMedalBold/>
+
+          <h3>
+            titre
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aut ipsum
+          </p>
+         </section>
+
+         <section>
+
+          <MaterialSymbolsAcUnit/>
+          <h3>
+            titre
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum aut ipsum
+          </p>
+         </section>
+        </div>
 
         <h2 className='titre'>Nos commentaires</h2>
-
         <div className='avis'>
             <div className='gauche'>
                 <h2>
@@ -139,26 +185,7 @@ function Home() {
             </div>
 
             <div className='droite'>
-            <Slider {...settings}>
-        {commentaireInfo.map((commentaires, i) =>(
-       <div className='commentaire'  key={"nos commentaires" + i}>
- 
-              <img src={commentaires.image} alt="" />
-              <section>
-              <PhQuotesFill></PhQuotesFill>
-              <p>  {commentaires.commentaire} </p>
-              
-              <div>
-              <h3 className='com-name'>
-                  {commentaires.nom}
-                </h3>
-             
-  
-              </div>
-              </section>
-           </div>
-        ))}
-</Slider>
+       
 
             </div>
 
